@@ -1,0 +1,121 @@
+.app {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 50px;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background-color: whitesmoke;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.timer {
+  width: 500px;
+  height: 200px;
+  background-color: whitesmoke;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  text-align: left;
+  color: blue;
+  margin-bottom: 10px;
+}
+h1 {
+  text-align: left;
+}
+
+.todos {
+  width: 500px;
+  height: auto;
+  background-color: whitesmoke;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 40px 0px;
+}
+.todo {
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: grey;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 10px;
+  border-bottom: 1px solid grey;
+}
+.todo > button {
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  background-color: white;
+  color: red;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 5px;
+}
+.todos > form {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: white;
+}
+.todos > form > input {
+  flex: 0.6;
+  border: none;
+  box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  outline: none;
+}
+.todos > form > button {
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  background-color: rgb(2, 2, 2);
+  color: green;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 5px;
+}
