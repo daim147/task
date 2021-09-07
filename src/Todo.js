@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 const Todo = (data) => {
   const deletePost = async () => {
-    const deleteTodo = await axios.delete(
+    await axios.delete(
       `https://60eedea7eb4c0a0017bf4685.mockapi.io/api/test/todo/${data.id}`
     );
 

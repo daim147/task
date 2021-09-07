@@ -91,6 +91,7 @@ h1 {
   border: none;
   outline: none;
   background-color: white;
+  cursor: pointer;
   color: red;
   font-size: 1.1rem;
   font-weight: 700;
@@ -111,10 +112,11 @@ h1 {
 }
 .todos > form > button {
   padding: 10px 15px;
+  cursor: pointer;
   border: none;
   outline: none;
-  background-color: rgb(2, 2, 2);
-  color: green;
+  background-color: rgb(41, 32, 32);
+  color: white;
   font-size: 1.1rem;
   font-weight: 700;
   border-radius: 5px;
