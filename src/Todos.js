@@ -18,12 +18,7 @@ const Todos = () => {
     e.preventDefault();
     const { data } = await axios.post(
       "https://60eedea7eb4c0a0017bf4685.mockapi.io/api/test/todo/",
-      {},
-      {
-        body: JSON.stringify({
-          task: input,
-        }),
-      }
+      { task: input }
     );
     setTodos((todos) => [...todos, data]);
     setInput("");
