@@ -16,10 +16,10 @@ const Todos = () => {
   }, []);
 
   const addTodo = async (e) => {
+    e.preventDefault();
     if (input.trim() === "") return;
     setDisable(true);
 
-    e.preventDefault();
     const { data } = await axios.post(
       "https://60eedea7eb4c0a0017bf4685.mockapi.io/api/test/todo/",
       { task: input }
