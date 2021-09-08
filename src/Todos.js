@@ -4,6 +4,7 @@ import Todo from "./Todo";
 const Todos = () => {
   const [todos, setTodos] = useState(null);
   const [input, setInput] = useState("");
+  const [disable, setDisable] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -15,13 +16,17 @@ const Todos = () => {
   }, []);
 
   const addTodo = async (e) => {
+    if (input.trim() === "") return;
+    setDisable(true);
+
     e.preventDefault();
     const { data } = await axios.post(
       "https://60eedea7eb4c0a0017bf4685.mockapi.io/api/test/todo/",
       { task: input }
     );
-    setTodos((todos) => [...todos, data]);
     setInput("");
+    setDisable(false);
+    setTodos((todos) => [...todos, data]);
   };
 
   const removeTodo = (id) => {
@@ -40,7 +45,9 @@ const Todos = () => {
           value={input}
           onChange={(e) => setInput(e.target.value)}
         />
-        <button type="submit">Sumbit</button>
+        <button disabled={disable ? true : false} type="submit">
+          Sumbit
+        </button>
       </form>
     </div>
   );
